@@ -83,11 +83,17 @@
             <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
           </div>
           <div class="col-md-5 text-center d-none d-md-block">
-            <img
-              class="img-fluid"
-              src="assets/ebook-cover.png"
-              alt="ebook cover"
-            />
+            <span
+              class="tt"
+              data-bs-placement="bottom"
+              title="Net Ninja Book Cover"
+            >
+              <img
+                class="img-fluid"
+                src="assets/ebook-cover.png"
+                alt="ebook cover"
+              />
+            </span>
           </div>
         </div>
       </div>
@@ -461,6 +467,16 @@
                   id="email"
                   placeholder="e.g. mario@example.com"
                 />
+                <!-- Tooltip -->
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="right"
+                    title="Enter an email address we can reply to."
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
               <label for="name" class="form-label">Name:</label>
               <div class="mb-3 input-group">
@@ -473,6 +489,15 @@
                   class="form-control"
                   placeholder="e.g. mario"
                 />
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="right"
+                    title="Pretty self explanatory really..."
+                  >
+                    <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
 
               <label for="subject" class="form-label">Question type?</label>
@@ -509,5 +534,11 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tooltips = document.querySelectorAll(".tt");
+      tooltips.forEach((t) => {
+        new bootstrap.Tooltip(t);
+      });
+    </script>
   </body>
 </html>

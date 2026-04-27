@@ -1,0 +1,27 @@
+// Overrides
+$primary: #2ec27e;
+$light: #303030;
+$body-bg: #2d2d2d;
+$body-color: rgb(241, 241, 241);
+$body-tertiary-bg: #363636;
+
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $primary;
+$body-secondary-color: rgb(179, 179, 179);
+$secondary: $body-secondary-color;
+
+// Import Boostrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.styled-image {
+    border-radius: 60px;
+}
+
+.tooltip-inner {
+    background-color: $body-tertiary-bg;
+    color: white;
+}
+
+.btn-close {
+    filter: invert(1);
+}
